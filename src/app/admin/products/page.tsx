@@ -27,7 +27,7 @@ export default function AdminProductsPage() {
 
   // Filter and sort products
   const filteredProducts = useMemo(() => {
-    let filtered = products.filter((product) => {
+    const filtered = products.filter((product) => {
       const matchesSearch = !searchQuery || 
         product.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
         product.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -277,7 +277,7 @@ export default function AdminProductsPage() {
                           </TableCell>
                           <TableCell>{product.inventory} units</TableCell>
                           <TableCell>
-                            <Badge variant={stockStatus.color as any}>
+                           <Badge variant={stockStatus.color as "default" | "secondary" | "destructive"}>
                               {stockStatus.status}
                             </Badge>
                           </TableCell>

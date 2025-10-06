@@ -42,7 +42,7 @@ export default function CheckoutSuccessPage() {
               </div>
 
               <div className="border-t pt-6">
-                <h3 className="font-semibold mb-4 text-center">What's Next?</h3>
+                <h3 className="font-semibold mb-4 text-center">What&apos;s Next?</h3>
                 <div className="space-y-4">
                   <div className="flex items-start space-x-3">
                     <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-primary-foreground text-sm font-bold">
@@ -51,7 +51,7 @@ export default function CheckoutSuccessPage() {
                     <div>
                       <p className="font-medium">Order Confirmation</p>
                       <p className="text-sm text-muted-foreground">
-                        You'll receive an email confirmation shortly with your order details.
+                        You&apos;ll receive an email confirmation shortly with your order details.
                       </p>
                     </div>
                   </div>
@@ -62,7 +62,7 @@ export default function CheckoutSuccessPage() {
                     <div>
                       <p className="font-medium">Processing</p>
                       <p className="text-sm text-muted-foreground">
-                        We'll prepare your order for shipment within 1-2 business days.
+                        We&apos;ll prepare your order for shipment within 1-2 business days.
                       </p>
                     </div>
                   </div>
@@ -73,7 +73,7 @@ export default function CheckoutSuccessPage() {
                     <div>
                       <p className="font-medium">Shipping</p>
                       <p className="text-sm text-muted-foreground">
-                        Track your package with the tracking number we'll send you.
+                        Track your package with the tracking number we&apos;ll send you.
                       </p>
                     </div>
                   </div>

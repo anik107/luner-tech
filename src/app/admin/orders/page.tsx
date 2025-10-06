@@ -22,7 +22,7 @@ export default function AdminOrdersPage() {
 
   // Filter and sort orders
   const filteredOrders = useMemo(() => {
-    let filtered = orders.filter((order) => {
+    const filtered = orders.filter((order) => {
       const matchesSearch = !searchQuery || 
         order.id.toLowerCase().includes(searchQuery.toLowerCase()) ||
         order.customerName.toLowerCase().includes(searchQuery.toLowerCase()) ||

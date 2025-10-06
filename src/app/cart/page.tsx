@@ -6,7 +6,6 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
 import { Separator } from "@/components/ui/separator"
 import MainLayout from "@/components/main-layout"
 import { getCart, updateCartQuantity, removeFromCart, getCartTotal, clearCart, CartItem } from "@/lib/data"
@@ -84,7 +83,7 @@ export default function CartPage() {
             <ShoppingBag className="h-24 w-24 mx-auto mb-6 text-muted-foreground" />
             <h1 className="text-3xl font-bold mb-4">Your cart is empty</h1>
             <p className="text-xl text-muted-foreground mb-8">
-              Looks like you haven't added anything to your cart yet.
+              Looks like you haven&apos;t added anything to your cart yet.
             </p>
             <Button asChild size="lg">
               <Link href="/products">
