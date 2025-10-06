@@ -1,0 +1,477 @@
+[
+  {
+    "id": "1",
+    "name": "WA Workspace Pro",
+    "description": "Professional wireless charging station with built-in LED ambient lighting and smartphone stand. Perfect for modern workspaces.",
+    "price": 89.99,
+    "category": "Workspace",
+    "inventory": 45,
+    "images": [
+      "https://images.unsplash.com/photo-1621839673705-6617adf9e890?w=600&h=400&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?w=600&h=400&fit=crop&crop=center"
+    ],
+    "specifications": {
+      "Power Output": "15W Qi Wireless Charging",
+      "Lighting": "RGB LED with 16 million colors",
+      "Materials": "Aluminum & Tempered Glass",
+      "Compatibility": "iPhone 12+, Samsung Galaxy S20+, Pixel 4+"
+    },
+    "featured": true
+  },
+  {
+    "id": "2",
+    "name": "Nebula Smart Hub",
+    "description": "AI-powered home automation hub that connects all your smart devices with voice control and gesture recognition.",
+    "price": 249.99,
+    "category": "Smart Home",
+    "inventory": 23,
+    "images": [
+      "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=600&h=400&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1563770660941-20978e870e26?w=600&h=400&fit=crop&crop=center"
+    ],
+    "specifications": {
+      "Connectivity": "WiFi 6, Bluetooth 5.2, Zigbee 3.0",
+      "Voice Control": "Alexa, Google Assistant, Siri",
+      "Processors": "Quad-core ARM Cortex-A78",
+      "Storage": "32GB eMMC"
+    },
+    "featured": true
+  },
+  {
+    "id": "3",
+    "name": "Quantum Earbuds Pro",
+    "description": "Premium wireless earbuds with active noise cancellation and spatial audio technology for immersive listening.",
+    "price": 179.99,
+    "category": "Audio",
+    "inventory": 67,
+    "images": [
+      "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=600&h=400&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?w=600&h=400&fit=crop&crop=center"
+    ],
+    "specifications": {
+      "Battery Life": "8h earbuds + 24h case",
+      "Noise Cancellation": "Adaptive ANC up to -35dB",
+      "Audio Codecs": "LDAC, AAC, SBC",
+      "Water Resistance": "IPX5"
+    },
+    "featured": true
+  },
+  {
+    "id": "4",
+    "name": "Stellar Mechanical Keyboard",
+    "description": "Ultra-slim mechanical keyboard with per-key RGB lighting and hot-swappable switches for the ultimate typing experience.",
+    "price": 159.99,
+    "category": "Peripherals",
+    "inventory": 34,
+    "images": [
+      "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=600&h=400&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1601445638532-3c6f6c3aa1d6?w=600&h=400&fit=crop&crop=center"
+    ],
+    "specifications": {
+      "Switch Type": "Hot-swappable Cherry MX Compatible",
+      "Layout": "75% Compact",
+      "Connectivity": "USB-C & 2.4GHz Wireless",
+      "Battery": "3000mAh (up to 200h)"
+    },
+    "featured": false
+  },
+  {
+    "id": "5",
+    "name": "Cosmic Webcam 4K",
+    "description": "Professional 4K webcam with auto-framing and AI-powered background blur for perfect video calls.",
+    "price": 129.99,
+    "category": "Peripherals",
+    "inventory": 28,
+    "images": [
+      "https://images.unsplash.com/photo-1587202372634-32705e3bf49c?w=600&h=400&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?w=600&h=400&fit=crop&crop=center"
+    ],
+    "specifications": {
+      "Resolution": "4K@30fps, 1080p@60fps",
+      "Field of View": "90° diagonal with auto-framing",
+      "Microphone": "Dual stereo with noise reduction",
+      "Compatibility": "Windows, macOS, Linux"
+    },
+    "featured": false
+  },
+  {
+    "id": "6",
+    "name": "Orbit Desk Lamp Pro",
+    "description": "Smart LED desk lamp with wireless charging base, adjustable color temperature, and app control.",
+    "price": 79.99,
+    "category": "Workspace",
+    "inventory": 56,
+    "images": [
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=400&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=600&h=400&fit=crop&crop=center"
+    ],
+    "specifications": {
+      "Brightness": "2000 lumens max",
+      "Color Temperature": "2700K - 6500K",
+      "Wireless Charging": "15W Qi-compatible",
+      "Control": "Touch controls + mobile app"
+    },
+    "featured": false
+  },
+  {
+    "id": "7",
+    "name": "Titan Gaming Mouse",
+    "description": "High-precision gaming mouse with 20,000 DPI sensor and customizable RGB lighting effects.",
+    "price": 69.99,
+    "category": "Gaming",
+    "inventory": 89,
+    "images": [
+      "https://images.unsplash.com/photo-1527814050087-3793815479db?w=600&h=400&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?w=600&h=400&fit=crop&crop=center"
+    ],
+    "specifications": {
+      "Sensor": "PixArt PMW3389 20,000 DPI",
+      "Buttons": "8 programmable buttons",
+      "Polling Rate": "1000Hz",
+      "Weight": "85g (adjustable)"
+    },
+    "featured": false
+  },
+  {
+    "id": "8",
+    "name": "Nova Portable SSD",
+    "description": "Ultra-fast portable SSD with USB-C connectivity and military-grade durability for creators on the go.",
+    "price": 199.99,
+    "category": "Storage",
+    "inventory": 42,
+    "images": [
+      "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=600&h=400&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1559563458-527bd1abb0a3?w=600&h=400&fit=crop&crop=center"
+    ],
+    "specifications": {
+      "Capacity": "1TB NVMe SSD",
+      "Speed": "Up to 2,800 MB/s",
+      "Interface": "USB 3.2 Gen 2x2 Type-C",
+      "Durability": "IP65 water/dust resistant"
+    },
+    "featured": false
+  },
+  {
+    "id": "9",
+    "name": "Eclipse Monitor Stand",
+    "description": "Ergonomic dual monitor stand with built-in USB hub and wireless charging pad for ultimate desk organization.",
+    "price": 149.99,
+    "category": "Workspace",
+    "inventory": 19,
+    "images": [
+      "https://images.unsplash.com/photo-1593640495253-23196b27a87f?w=600&h=400&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=600&h=400&fit=crop&crop=center"
+    ],
+    "specifications": {
+      "Monitor Support": "Dual 27\" up to 15kg each",
+      "Height Adjustment": "100-500mm",
+      "USB Hub": "4x USB 3.0 ports",
+      "Wireless Charging": "10W Qi-compatible pad"
+    },
+    "featured": false
+  },
+  {
+    "id": "10",
+    "name": "Voyager Power Bank",
+    "description": "High-capacity wireless power bank with fast charging and LED display showing exact battery percentage.",
+    "price": 59.99,
+    "category": "Mobile",
+    "inventory": 78,
+    "images": [
+      "https://images.unsplash.com/photo-1583394838336-acd977736f90?w=600&h=400&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1604595131405-7be4857a7f8f?w=600&h=400&fit=crop&crop=center"
+    ],
+    "specifications": {
+      "Capacity": "20,000mAh",
+      "Wireless Output": "15W Qi wireless",
+      "Wired Output": "65W USB-C PD",
+      "Display": "Digital LED battery indicator"
+    },
+    "featured": false
+  },
+  {
+    "id": "11",
+    "name": "Zenith Bluetooth Speaker",
+    "description": "Premium portable Bluetooth speaker with 360° sound and waterproof design for any adventure.",
+    "price": 119.99,
+    "category": "Audio",
+    "inventory": 33,
+    "images": [
+      "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=600&h=400&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1545454675-3531b543be5d?w=600&h=400&fit=crop&crop=center"
+    ],
+    "specifications": {
+      "Power Output": "40W stereo sound",
+      "Battery Life": "24 hours playback",
+      "Water Rating": "IPX7 waterproof",
+      "Connectivity": "Bluetooth 5.0, AUX, USB-C"
+    },
+    "featured": false
+  },
+  {
+    "id": "12",
+    "name": "Galaxy Laptop Stand",
+    "description": "Adjustable aluminum laptop stand with excellent heat dissipation and ergonomic design.",
+    "price": 49.99,
+    "category": "Workspace",
+    "inventory": 64,
+    "images": [
+      "https://images.unsplash.com/photo-1527142879-c2d46ba7049c?w=600&h=400&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=600&h=400&fit=crop&crop=center"
+    ],
+    "specifications": {
+      "Material": "Premium aluminum alloy",
+      "Compatibility": "Laptops 10-17 inches",
+      "Adjustability": "6 height & angle settings",
+      "Weight": "1.2kg"
+    },
+    "featured": false
+  },
+  {
+    "id": "13",
+    "name": "Meteor USB-C Hub",
+    "description": "Compact 9-in-1 USB-C hub with 4K HDMI, ethernet, and fast charging pass-through for modern laptops.",
+    "price": 89.99,
+    "category": "Peripherals",
+    "inventory": 51,
+    "images": [
+      "https://images.unsplash.com/photo-1625842268584-8f3296236761?w=600&h=400&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop&crop=center"
+    ],
+    "specifications": {
+      "Ports": "9 ports including HDMI, USB-A, SD card",
+      "Video Output": "4K@60Hz HDMI",
+      "Ethernet": "Gigabit Ethernet port",
+      "Pass-through": "100W USB-C PD charging"
+    },
+    "featured": false
+  },
+  {
+    "id": "14",
+    "name": "Prism Smart Light Strip",
+    "description": "Intelligent LED light strip with music sync, voice control, and app-based customization for ambient lighting.",
+    "price": 39.99,
+    "category": "Smart Home",
+    "inventory": 87,
+    "images": [
+      "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=600&h=400&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1614332287897-cdc485fa562d?w=600&h=400&fit=crop&crop=center"
+    ],
+    "specifications": {
+      "Length": "5 meters (16.4 ft)",
+      "Colors": "16 million RGB colors",
+      "Control": "App, voice, music sync",
+      "Installation": "3M adhesive backing"
+    },
+    "featured": false
+  },
+  {
+    "id": "15",
+    "name": "Comet Gaming Headset",
+    "description": "Professional gaming headset with 7.1 surround sound, noise-canceling microphone, and RGB lighting.",
+    "price": 99.99,
+    "category": "Gaming",
+    "inventory": 41,
+    "images": [
+      "https://images.unsplash.com/photo-1599669454699-248893623440?w=600&h=400&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1484704324500-b26ee31bf0f7?w=600&h=400&fit=crop&crop=center"
+    ],
+    "specifications": {
+      "Audio": "7.1 virtual surround sound",
+      "Microphone": "Detachable noise-canceling",
+      "Comfort": "Memory foam ear cushions",
+      "Compatibility": "PC, PS5, Xbox, Switch"
+    },
+    "featured": false
+  },
+  {
+    "id": "16",
+    "name": "Aurora Phone Case",
+    "description": "Premium leather phone case with MagSafe compatibility and RFID-blocking wallet functionality.",
+    "price": 34.99,
+    "category": "Mobile",
+    "inventory": 156,
+    "images": [
+      "https://images.unsplash.com/photo-1601972599720-0d1e4b5c5e1d?w=600&h=400&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1565849904461-04a58ad377e0?w=600&h=400&fit=crop&crop=center"
+    ],
+    "specifications": {
+      "Material": "Genuine Italian leather",
+      "Compatibility": "iPhone 12/13/14/15 series",
+      "Features": "MagSafe, RFID blocking, card slots",
+      "Protection": "Military-grade drop protection"
+    },
+    "featured": false
+  },
+  {
+    "id": "17",
+    "name": "Infinity Webcam Light",
+    "description": "Professional ring light with adjustable brightness and color temperature, perfect for video calls and streaming.",
+    "price": 45.99,
+    "category": "Peripherals",
+    "inventory": 73,
+    "images": [
+      "https://images.unsplash.com/photo-1614332287897-cdc485fa562d?w=600&h=400&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=400&fit=crop&crop=center"
+    ],
+    "specifications": {
+      "Diameter": "10 inch ring light",
+      "Color Temperature": "3200K-5600K",
+      "Brightness": "10%-100% dimming",
+      "Mount": "Universal phone and camera mount"
+    },
+    "featured": false
+  },
+  {
+    "id": "18",
+    "name": "Vector Smartwatch",
+    "description": "Advanced fitness smartwatch with GPS, heart rate monitoring, and 7-day battery life.",
+    "price": 199.99,
+    "category": "Wearables",
+    "inventory": 29,
+    "images": [
+      "https://images.unsplash.com/photo-1523475496153-3d6cc0f0bf19?w=600&h=400&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1434493789847-2f02dc6ca35d?w=600&h=400&fit=crop&crop=center"
+    ],
+    "specifications": {
+      "Display": "1.4\" AMOLED touchscreen",
+      "Battery": "7 days typical use",
+      "Sensors": "GPS, heart rate, SpO2, sleep",
+      "Water Resistance": "5ATM + swim-proof"
+    },
+    "featured": false
+  },
+  {
+    "id": "19",
+    "name": "Astro Desk Pad",
+    "description": "Premium leather desk pad with wireless charging zones and cable management for the perfect workspace.",
+    "price": 79.99,
+    "category": "Workspace",
+    "inventory": 38,
+    "images": [
+      "https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=600&h=400&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?w=600&h=400&fit=crop&crop=center"
+    ],
+    "specifications": {
+      "Size": "31.5\" x 15.7\" x 0.08\"",
+      "Material": "PU leather with micro-fiber base",
+      "Wireless Charging": "Dual 10W charging zones",
+      "Features": "Cable management and device slots"
+    },
+    "featured": false
+  },
+  {
+    "id": "20",
+    "name": "Pulse Heart Rate Monitor",
+    "description": "Professional chest strap heart rate monitor with Bluetooth connectivity for accurate fitness tracking.",
+    "price": 49.99,
+    "category": "Wearables",
+    "inventory": 62,
+    "images": [
+      "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&h=400&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1434493789847-2f02dc6ca35d?w=600&h=400&fit=crop&crop=center"
+    ],
+    "specifications": {
+      "Accuracy": "±1bpm precision",
+      "Battery": "1 year coin cell battery",
+      "Connectivity": "Bluetooth 5.0 & ANT+",
+      "Compatibility": "iOS, Android, fitness apps"
+    },
+    "featured": false
+  },
+  {
+    "id": "21",
+    "name": "Plasma Car Charger",
+    "description": "Fast wireless car charger with automatic clamping and air vent mount for hands-free driving.",
+    "price": 39.99,
+    "category": "Mobile",
+    "inventory": 95,
+    "images": [
+      "https://images.unsplash.com/photo-1583394838336-acd977736f90?w=600&h=400&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=600&h=400&fit=crop&crop=center"
+    ],
+    "specifications": {
+      "Charging": "15W fast wireless charging",
+      "Mount": "Air vent or dashboard mount",
+      "Auto-Clamping": "Sensor-activated phone grip",
+      "Compatibility": "Qi-enabled devices 4.7\"-6.5\""
+    },
+    "featured": false
+  },
+  {
+    "id": "22",
+    "name": "Quantum Cable Set",
+    "description": "Premium braided cable set including USB-C, Lightning, and Micro-USB with fast charging and data sync.",
+    "price": 24.99,
+    "category": "Accessories",
+    "inventory": 127,
+    "images": [
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1625842268584-8f3296236761?w=600&h=400&fit=crop&crop=center"
+    ],
+    "specifications": {
+      "Length": "3 cables x 6ft each",
+      "Material": "Nylon braided with aluminum connectors",
+      "Speed": "480Mbps data + 3A fast charging",
+      "Durability": "15,000+ bend lifecycle"
+    },
+    "featured": false
+  },
+  {
+    "id": "23",
+    "name": "Stellar Webcam Cover",
+    "description": "Ultra-thin sliding webcam cover for privacy protection on laptops, tablets, and desktop monitors.",
+    "price": 9.99,
+    "category": "Accessories",
+    "inventory": 203,
+    "images": [
+      "https://images.unsplash.com/photo-1587202372634-32705e3bf49c?w=600&h=400&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?w=600&h=400&fit=crop&crop=center"
+    ],
+    "specifications": {
+      "Thickness": "0.027\" ultra-thin design",
+      "Material": "Premium metal alloy",
+      "Adhesive": "Residue-free 3M adhesive",
+      "Compatibility": "Universal fit for all devices"
+    },
+    "featured": false
+  },
+  {
+    "id": "24",
+    "name": "Cosmos Air Purifier",
+    "description": "Smart air purifier with HEPA filtration, air quality monitoring, and app control for healthy living spaces.",
+    "price": 189.99,
+    "category": "Smart Home",
+    "inventory": 17,
+    "images": [
+      "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=600&h=400&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1563770660941-20978e870e26?w=600&h=400&fit=crop&crop=center"
+    ],
+    "specifications": {
+      "Coverage": "350 sq ft room capacity",
+      "Filtration": "True HEPA + activated carbon",
+      "Air Quality": "Real-time PM2.5 monitoring",
+      "Smart Features": "App control, voice commands, scheduling"
+    },
+    "featured": false
+  },
+  {
+    "id": "25",
+    "name": "Flux Tablet Stand",
+    "description": "Adjustable aluminum tablet stand with 360° rotation and perfect viewing angles for work and entertainment.",
+    "price": 29.99,
+    "category": "Accessories",
+    "inventory": 84,
+    "images": [
+      "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=600&h=400&fit=crop&crop=center",
+      "https://images.unsplash.com/photo-1527142879-c2d46ba7049c?w=600&h=400&fit=crop&crop=center"
+    ],
+    "specifications": {
+      "Material": "Aluminum alloy construction",
+      "Compatibility": "4\"-13\" tablets and phones",
+      "Adjustability": "360° rotation, multiple angles",
+      "Stability": "Non-slip silicone base and grips"
+    },
+    "featured": false
+  }
+]

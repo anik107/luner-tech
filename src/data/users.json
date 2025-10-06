@@ -1,0 +1,317 @@
+[
+  {
+    "id": "USR-001",
+    "name": "Alex Johnson",
+    "email": "alex.johnson@email.com",
+    "joinDate": "2023-08-15T00:00:00Z",
+    "totalOrders": 2,
+    "totalSpent": 439.96,
+    "orderHistory": ["ORD-2024-001", "ORD-2024-021"],
+    "preferences": {
+      "category": "Workspace",
+      "newsletter": true,
+      "smsUpdates": false
+    },
+    "address": {
+      "street": "123 Tech Avenue",
+      "city": "San Francisco",
+      "state": "CA",
+      "zipCode": "94105",
+      "country": "USA"
+    }
+  },
+  {
+    "id": "USR-002",
+    "name": "Sarah Chen",
+    "email": "sarah.chen@email.com",
+    "joinDate": "2023-09-22T00:00:00Z",
+    "totalOrders": 2,
+    "totalSpent": 579.96,
+    "orderHistory": ["ORD-2024-002", "ORD-2024-026"],
+    "preferences": {
+      "category": "Smart Home",
+      "newsletter": true,
+      "smsUpdates": true
+    },
+    "address": {
+      "street": "456 Innovation Drive",
+      "city": "Austin",
+      "state": "TX",
+      "zipCode": "78701",
+      "country": "USA"
+    }
+  },
+  {
+    "id": "USR-003",
+    "name": "Michael Rodriguez",
+    "email": "michael.rodriguez@email.com",
+    "joinDate": "2023-07-10T00:00:00Z",
+    "totalOrders": 2,
+    "totalSpent": 769.95,
+    "orderHistory": ["ORD-2024-003", "ORD-2024-016"],
+    "preferences": {
+      "category": "Gaming",
+      "newsletter": false,
+      "smsUpdates": true
+    },
+    "address": {
+      "street": "789 Gaming Street",
+      "city": "Seattle",
+      "state": "WA",
+      "zipCode": "98101",
+      "country": "USA"
+    }
+  },
+  {
+    "id": "USR-004",
+    "name": "Emily Watson",
+    "email": "emily.watson@email.com",
+    "joinDate": "2023-11-05T00:00:00Z",
+    "totalOrders": 2,
+    "totalSpent": 259.95,
+    "orderHistory": ["ORD-2024-004", "ORD-2024-018"],
+    "preferences": {
+      "category": "Workspace",
+      "newsletter": true,
+      "smsUpdates": false
+    },
+    "address": {
+      "street": "321 Work Plaza",
+      "city": "New York",
+      "state": "NY",
+      "zipCode": "10001",
+      "country": "USA"
+    }
+  },
+  {
+    "id": "USR-005",
+    "name": "David Kim",
+    "email": "david.kim@email.com",
+    "joinDate": "2023-06-18T00:00:00Z",
+    "totalOrders": 2,
+    "totalSpent": 269.97,
+    "orderHistory": ["ORD-2024-005", "ORD-2024-030"],
+    "preferences": {
+      "category": "Storage",
+      "newsletter": true,
+      "smsUpdates": true
+    },
+    "address": {
+      "street": "654 Developer Lane",
+      "city": "Los Angeles",
+      "state": "CA",
+      "zipCode": "90210",
+      "country": "USA"
+    }
+  },
+  {
+    "id": "USR-006",
+    "name": "Lisa Park",
+    "email": "lisa.park@email.com",
+    "joinDate": "2023-12-01T00:00:00Z",
+    "totalOrders": 2,
+    "totalSpent": 464.94,
+    "orderHistory": ["ORD-2024-006", "ORD-2024-022"],
+    "preferences": {
+      "category": "Mobile",
+      "newsletter": false,
+      "smsUpdates": false
+    },
+    "address": {
+      "street": "987 Mobile Court",
+      "city": "Chicago",
+      "state": "IL",
+      "zipCode": "60601",
+      "country": "USA"
+    }
+  },
+  {
+    "id": "USR-007",
+    "name": "James Wilson",
+    "email": "james.wilson@email.com",
+    "joinDate": "2023-05-30T00:00:00Z",
+    "totalOrders": 2,
+    "totalSpent": 589.95,
+    "orderHistory": ["ORD-2024-007", "ORD-2024-017"],
+    "preferences": {
+      "category": "Wearables",
+      "newsletter": true,
+      "smsUpdates": true
+    },
+    "address": {
+      "street": "147 Fitness Boulevard",
+      "city": "Denver",
+      "state": "CO",
+      "zipCode": "80201",
+      "country": "USA"
+    }
+  },
+  {
+    "id": "USR-008",
+    "name": "Maria Garcia",
+    "email": "maria.garcia@email.com",
+    "joinDate": "2023-10-12T00:00:00Z",
+    "totalOrders": 2,
+    "totalSpent": 599.94,
+    "orderHistory": ["ORD-2024-008", "ORD-2024-025"],
+    "preferences": {
+      "category": "Audio",
+      "newsletter": true,
+      "smsUpdates": false
+    },
+    "address": {
+      "street": "258 Music Street",
+      "city": "Nashville",
+      "state": "TN",
+      "zipCode": "37201",
+      "country": "USA"
+    }
+  },
+  {
+    "id": "USR-009",
+    "name": "Robert Taylor",
+    "email": "robert.taylor@email.com",
+    "joinDate": "2023-04-25T00:00:00Z",
+    "totalOrders": 2,
+    "totalSpent": 450.95,
+    "orderHistory": ["ORD-2024-009", "ORD-2024-019"],
+    "preferences": {
+      "category": "Peripherals",
+      "newsletter": false,
+      "smsUpdates": true
+    },
+    "address": {
+      "street": "369 Stream Avenue",
+      "city": "Portland",
+      "state": "OR",
+      "zipCode": "97201",
+      "country": "USA"
+    }
+  },
+  {
+    "id": "USR-010",
+    "name": "Jennifer Brown",
+    "email": "jennifer.brown@email.com",
+    "joinDate": "2023-09-08T00:00:00Z",
+    "totalOrders": 2,
+    "totalSpent": 419.95,
+    "orderHistory": ["ORD-2024-010", "ORD-2024-028"],
+    "preferences": {
+      "category": "Workspace",
+      "newsletter": true,
+      "smsUpdates": false
+    },
+    "address": {
+      "street": "741 Office Park",
+      "city": "Miami",
+      "state": "FL",
+      "zipCode": "33101",
+      "country": "USA"
+    }
+  },
+  {
+    "id": "USR-011",
+    "name": "Christopher Davis",
+    "email": "christopher.davis@email.com",
+    "joinDate": "2023-03-14T00:00:00Z",
+    "totalOrders": 2,
+    "totalSpent": 349.95,
+    "orderHistory": ["ORD-2024-011", "ORD-2024-023"],
+    "preferences": {
+      "category": "Smart Home",
+      "newsletter": true,
+      "smsUpdates": true
+    },
+    "address": {
+      "street": "852 Clean Air Drive",
+      "city": "Phoenix",
+      "state": "AZ",
+      "zipCode": "85001",
+      "country": "USA"
+    }
+  },
+  {
+    "id": "USR-012",
+    "name": "Amanda Lee",
+    "email": "amanda.lee@email.com",
+    "joinDate": "2023-08-20T00:00:00Z",
+    "totalOrders": 2,
+    "totalSpent": 285.92,
+    "orderHistory": ["ORD-2024-012", "ORD-2024-020"],
+    "preferences": {
+      "category": "Accessories",
+      "newsletter": false,
+      "smsUpdates": false
+    },
+    "address": {
+      "street": "963 Travel Road",
+      "city": "Las Vegas",
+      "state": "NV",
+      "zipCode": "89101",
+      "country": "USA"
+    }
+  },
+  {
+    "id": "USR-013",
+    "name": "Kevin Martinez",
+    "email": "kevin.martinez@email.com",
+    "joinDate": "2023-07-03T00:00:00Z",
+    "totalOrders": 2,
+    "totalSpent": 509.94,
+    "orderHistory": ["ORD-2024-013", "ORD-2024-027"],
+    "preferences": {
+      "category": "Workspace",
+      "newsletter": true,
+      "smsUpdates": true
+    },
+    "address": {
+      "street": "159 Corporate Center",
+      "city": "Atlanta",
+      "state": "GA",
+      "zipCode": "30301",
+      "country": "USA"
+    }
+  },
+  {
+    "id": "USR-014",
+    "name": "Rachel Green",
+    "email": "rachel.green@email.com",
+    "joinDate": "2023-11-18T00:00:00Z",
+    "totalOrders": 2,
+    "totalSpent": 479.95,
+    "orderHistory": ["ORD-2024-014", "ORD-2024-024"],
+    "preferences": {
+      "category": "Audio",
+      "newsletter": true,
+      "smsUpdates": false
+    },
+    "address": {
+      "street": "753 Audio Lane",
+      "city": "Boston",
+      "state": "MA",
+      "zipCode": "02101",
+      "country": "USA"
+    }
+  },
+  {
+    "id": "USR-015",
+    "name": "Daniel Anderson",
+    "email": "daniel.anderson@email.com",
+    "joinDate": "2023-02-28T00:00:00Z",
+    "totalOrders": 2,
+    "totalSpent": 489.96,
+    "orderHistory": ["ORD-2024-015", "ORD-2024-029"],
+    "preferences": {
+      "category": "Gaming",
+      "newsletter": false,
+      "smsUpdates": true
+    },
+    "address": {
+      "street": "456 Gaming Plaza",
+      "city": "San Diego",
+      "state": "CA",
+      "zipCode": "92101",
+      "country": "USA"
+    }
+  }
+]
