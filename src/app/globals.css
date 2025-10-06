@@ -116,7 +116,83 @@
   * {
     @apply border-border outline-ring/50;
   }
+  
   body {
     @apply bg-background text-foreground;
+    /* Improve text rendering on mobile */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+  
+  /* Mobile-first typography improvements */
+  h1, h2, h3, h4, h5, h6 {
+    @apply leading-tight;
+  }
+  
+  /* Ensure proper touch targets on mobile (44px minimum) */
+  button, 
+  [role="button"], 
+  input[type="submit"], 
+  input[type="button"], 
+  label[for] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Improve form element accessibility on mobile */
+  input, textarea, select {
+    @apply text-base;
+    /* Prevent zoom on iOS */
+    font-size: max(16px, 1rem);
+  }
+  
+  /* Better focus indicators for keyboard navigation */
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-ring;
+  }
+  
+  /* Improve tap targets spacing on mobile */
+  .touch-target {
+    @apply min-h-[44px] min-w-[44px] flex items-center justify-center;
+  }
+  
+  /* Line clamping utility */
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  /* Mobile-friendly scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--border));
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--muted-foreground));
+  }
+  
+  /* Better mobile container spacing */
+  .mobile-container {
+    @apply px-4 sm:px-6 lg:px-8;
   }
 }

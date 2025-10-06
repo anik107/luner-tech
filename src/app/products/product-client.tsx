@@ -88,26 +88,51 @@ export default function ProductsClient() {
 
   return (
     <MainLayout>
-      <div className="container mx-auto max-w-screen-2xl px-4 py-8">
-        <div className="container mx-auto max-w-screen-2xl px-4 py-8">
-            {/* Page Header */}
-            <div className="mb-8">
-            <h1 className="text-3xl md:text-4xl font-bold mb-4">All Products</h1>
-            <p className="text-xl text-muted-foreground">
-                Discover our complete collection of modern electronics and gadgets
-            </p>
-            </div>
+      <div className="container mx-auto max-w-screen-2xl px-4 sm:px-6 py-6 sm:py-8">
+        {/* Page Header */}
+        <div className="mb-6 sm:mb-8">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">All Products</h1>
+          <p className="text-lg sm:text-xl text-muted-foreground">
+            Discover our complete collection of modern electronics and gadgets
+          </p>
+        </div>
 
-            <div className="flex flex-col lg:flex-row gap-8">
-            {/* Filters Sidebar */}
-            <aside className={`w-full lg:w-80 space-y-6 ${showFilters ? 'block' : 'hidden lg:block'}`}>
-                <div className="bg-card rounded-lg border p-6">
-                <div className="flex items-center justify-between mb-4">
-                    <h2 className="text-lg font-semibold">Filters</h2>
-                    <Button variant="ghost" size="sm" onClick={clearFilters}>
+        <div className="flex flex-col lg:flex-row gap-6 lg:gap-8">
+          {/* Mobile Filters Overlay */}
+          {showFilters && (
+            <div className="lg:hidden fixed inset-0 z-40 bg-black/50" onClick={() => setShowFilters(false)} />
+          )}
+          
+          {/* Filters Sidebar */}
+          <aside className={`
+            ${showFilters ? 'translate-x-0' : '-translate-x-full'} 
+            lg:translate-x-0 
+            fixed lg:static 
+            inset-y-0 left-0 
+            z-50 lg:z-auto 
+            w-80 lg:w-80 
+            bg-background 
+            transition-transform duration-300 ease-in-out
+            lg:block
+            overflow-y-auto
+          `}>
+            <div className="bg-card rounded-lg border p-4 sm:p-6 h-full lg:h-auto">
+              <div className="flex items-center justify-between mb-4">
+                <h2 className="text-lg font-semibold">Filters</h2>
+                <div className="flex items-center gap-2">
+                  <Button variant="ghost" size="sm" onClick={clearFilters}>
                     Clear All
-                    </Button>
+                  </Button>
+                  <Button 
+                    variant="ghost" 
+                    size="sm" 
+                    onClick={() => setShowFilters(false)}
+                    className="lg:hidden"
+                  >
+                    ✕
+                  </Button>
                 </div>
+              </div>
 
                 {/* Search */}
                 <div className="space-y-2 mb-6">
@@ -162,107 +187,107 @@ export default function ProductsClient() {
                 </div>
             </aside>
 
-            {/* Main Content */}
-            <main className="flex-1">
-                {/* Top Bar */}
-                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-8">
-                <div className="flex items-center gap-2">
-                    <Button
-                    variant="outline"
-                    size="sm"
-                    onClick={() => setShowFilters(!showFilters)}
-                    className="lg:hidden"
-                    >
-                    <Filter className="h-4 w-4 mr-2" />
-                    Filters
-                    </Button>
-                    <span className="text-muted-foreground">
-                    {filteredProducts.length} products found
-                    </span>
-                </div>
+          {/* Main Content */}
+          <main className="flex-1 min-w-0">
+            {/* Top Bar */}
+            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6 sm:mb-8">
+              <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-2 w-full sm:w-auto">
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={() => setShowFilters(!showFilters)}
+                  className="lg:hidden w-full sm:w-auto"
+                >
+                  <Filter className="h-4 w-4 mr-2" />
+                  Filters
+                </Button>
+                <span className="text-sm text-muted-foreground text-center sm:text-left">
+                  {filteredProducts.length} products found
+                </span>
+              </div>
 
-                <div className="flex items-center gap-2">
-                    <SlidersHorizontal className="h-4 w-4 text-muted-foreground" />
-                    <Select value={sortBy} onValueChange={setSortBy}>
-                    <SelectTrigger className="w-48">
-                        <SelectValue />
-                    </SelectTrigger>
-                    <SelectContent>
-                        <SelectItem value="name">Sort by Name</SelectItem>
-                        <SelectItem value="price-low">Price: Low to High</SelectItem>
-                        <SelectItem value="price-high">Price: High to Low</SelectItem>
-                    </SelectContent>
-                    </Select>
-                </div>
-                </div>
-
-                {/* Products Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {filteredProducts.map((product) => (
-                    <Card key={product.id} className="group transition-all duration-300 hover:shadow-lg">
-                    <CardContent className="p-0">
-                        <div className="relative aspect-video overflow-hidden rounded-t-lg">
-                        <Image
-                            src={product.images[0]}
-                            alt={product.name}
-                            fill
-                            className="object-cover transition-transform duration-300 group-hover:scale-105"
-                        />
-                        {product.featured && (
-                            <Badge className="absolute top-4 left-4">Featured</Badge>
-                        )}
-                        <Badge variant="secondary" className="absolute top-4 right-4">
-                            {product.category}
-                        </Badge>
-                        </div>
-                        <div className="p-6">
-                        <Link href={`/products/${product.id}`}>
-                            <h3 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors cursor-pointer">
-                            {product.name}
-                            </h3>
-                        </Link>
-                        <p className="text-muted-foreground mb-4 line-clamp-2">
-                            {product.description}
-                        </p>
-                        <div className="flex items-center justify-between">
-                            <span className="text-2xl font-bold">
-                            ${product.price.toFixed(2)}
-                            </span>
-                            <div className="flex gap-2">
-                            <Button asChild variant="outline" size="sm">
-                                <Link href={`/products/${product.id}`}>
-                                View Details
-                                </Link>
-                            </Button>
-                            <Button 
-                                size="sm"
-                                onClick={() => handleAddToCart(product)}
-                            >
-                                <ShoppingCart className="h-4 w-4 mr-1" />
-                                Add to Cart
-                            </Button>
-                            </div>
-                        </div>
-                        </div>
-                    </CardContent>
-                    </Card>
-                ))}
-                </div>
-
-                {/* No Results */}
-                {filteredProducts.length === 0 && (
-                <div className="text-center py-16">
-                    <h3 className="text-2xl font-semibold mb-2">No products found</h3>
-                    <p className="text-muted-foreground mb-6">
-                    Try adjusting your search criteria or filters
-                    </p>
-                    <Button onClick={clearFilters}>
-                    Clear All Filters
-                    </Button>
-                </div>
-                )}
-            </main>
+              <div className="flex items-center gap-2 w-full sm:w-auto">
+                <SlidersHorizontal className="h-4 w-4 text-muted-foreground hidden sm:block" />
+                <Select value={sortBy} onValueChange={setSortBy}>
+                  <SelectTrigger className="w-full sm:w-48">
+                    <SelectValue />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="name">Sort by Name</SelectItem>
+                    <SelectItem value="price-low">Price: Low to High</SelectItem>
+                    <SelectItem value="price-high">Price: High to Low</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
             </div>
+
+            {/* Products Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6">
+              {filteredProducts.map((product) => (
+                <Card key={product.id} className="group transition-all duration-300 hover:shadow-lg">
+                  <CardContent className="p-0">
+                    <div className="relative aspect-video overflow-hidden rounded-t-lg">
+                      <Image
+                        src={product.images[0]}
+                        alt={product.name}
+                        fill
+                        className="object-cover transition-transform duration-300 group-hover:scale-105"
+                      />
+                      {product.featured && (
+                        <Badge className="absolute top-3 left-3 text-xs">Featured</Badge>
+                      )}
+                      <Badge variant="secondary" className="absolute top-3 right-3 text-xs">
+                        {product.category}
+                      </Badge>
+                    </div>
+                    <div className="p-4 sm:p-6">
+                      <Link href={`/products/${product.id}`}>
+                        <h3 className="text-lg sm:text-xl font-semibold mb-2 group-hover:text-primary transition-colors cursor-pointer">
+                          {product.name}
+                        </h3>
+                      </Link>
+                      <p className="text-sm sm:text-base text-muted-foreground mb-4 line-clamp-2">
+                        {product.description}
+                      </p>
+                      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+                        <span className="text-xl sm:text-2xl font-bold">
+                          ${product.price.toFixed(2)}
+                        </span>
+                        <div className="flex flex-col sm:flex-row gap-2">
+                          <Button asChild variant="outline" size="sm" className="w-full sm:w-auto">
+                            <Link href={`/products/${product.id}`}>
+                              View Details
+                            </Link>
+                          </Button>
+                          <Button 
+                            size="sm"
+                            onClick={() => handleAddToCart(product)}
+                            className="w-full sm:w-auto"
+                          >
+                            <ShoppingCart className="h-4 w-4 mr-1" />
+                            Add
+                          </Button>
+                        </div>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+
+            {/* No Results */}
+            {filteredProducts.length === 0 && (
+              <div className="text-center py-12 sm:py-16">
+                <h3 className="text-xl sm:text-2xl font-semibold mb-2">No products found</h3>
+                <p className="text-muted-foreground mb-6">
+                  Try adjusting your search criteria or filters
+                </p>
+                <Button onClick={clearFilters} className="w-full sm:w-auto">
+                  Clear All Filters
+                </Button>
+              </div>
+            )}
+          </main>
         </div>
       </div>
     </MainLayout>

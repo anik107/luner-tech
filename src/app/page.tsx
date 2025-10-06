@@ -67,7 +67,7 @@ export default function Home() {
           <CarouselContent>
             {heroSlides.map((slide, index) => (
               <CarouselItem key={index}>
-                <div className="relative h-[600px] flex items-center justify-center">
+                <div className="relative h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px] flex items-center justify-center">
                   <Image
                     src={slide.image}
                     alt={slide.title}
@@ -76,17 +76,17 @@ export default function Home() {
                     priority={index === 0}
                   />
                   <div className="absolute inset-0 bg-black/40" />
-                  <div className="relative z-10 text-center text-white max-w-3xl mx-auto px-4">
-                    <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                  <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4 sm:px-6">
+                    <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
                       {slide.title}
                     </h1>
-                    <p className="text-xl md:text-2xl mb-8 text-gray-200">
+                    <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-6 sm:mb-8 text-gray-200 max-w-2xl mx-auto">
                       {slide.description}
                     </p>
-                    <Button asChild size="lg" className="text-lg px-8 py-6">
+                    <Button asChild size="lg" className="text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6">
                       <Link href={slide.link}>
                         {slide.cta}
-                        <ArrowRight className="ml-2 h-5 w-5" />
+                        <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
                       </Link>
                     </Button>
                   </div>
@@ -94,24 +94,24 @@ export default function Home() {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="left-4" />
-          <CarouselNext className="right-4" />
+          <CarouselPrevious className="left-2 sm:left-4 hidden sm:flex" />
+          <CarouselNext className="right-2 sm:right-4 hidden sm:flex" />
         </Carousel>
       </section>
 
       {/* Features Section */}
-      <section className="py-16 bg-muted/30">
-        <div className="container mx-auto max-w-screen-2xl px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <section className="py-12 sm:py-16 bg-muted/30">
+        <div className="container mx-auto max-w-screen-2xl px-4 sm:px-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {features.map((feature, index) => {
               const IconComponent = feature.icon
               return (
                 <div key={index} className="text-center">
-                  <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                    <IconComponent className="h-8 w-8 text-primary-foreground" />
+                  <div className="w-12 h-12 sm:w-16 sm:h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                    <IconComponent className="h-6 w-6 sm:h-8 sm:w-8 text-primary-foreground" />
                   </div>
-                  <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>
-                  <p className="text-muted-foreground">{feature.description}</p>
+                  <h3 className="text-base sm:text-lg font-semibold mb-1 sm:mb-2">{feature.title}</h3>
+                  <p className="text-sm sm:text-base text-muted-foreground">{feature.description}</p>
                 </div>
               )
             })}
@@ -120,16 +120,16 @@ export default function Home() {
       </section>
 
       {/* Featured Products */}
-      <section className="py-16">
-        <div className="container mx-auto max-w-screen-2xl px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Featured Products</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+      <section className="py-12 sm:py-16">
+        <div className="container mx-auto max-w-screen-2xl px-4 sm:px-6">
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">Featured Products</h2>
+            <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto px-4">
               Discover our handpicked selection of cutting-edge electronics and gadgets
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {featuredProducts.map((product) => (
               <Card key={product.id} className="group cursor-pointer transition-all duration-300 hover:shadow-lg">
                 <CardContent className="p-0">
@@ -140,20 +140,20 @@ export default function Home() {
                       fill
                       className="object-cover transition-transform duration-300 group-hover:scale-105"
                     />
-                    <Badge className="absolute top-4 left-4">Featured</Badge>
+                    <Badge className="absolute top-3 left-3 text-xs sm:text-sm">Featured</Badge>
                   </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">
+                  <div className="p-4 sm:p-6">
+                    <h3 className="text-lg sm:text-xl font-semibold mb-2 group-hover:text-primary transition-colors">
                       {product.name}
                     </h3>
-                    <p className="text-muted-foreground mb-4 line-clamp-2">
+                    <p className="text-sm sm:text-base text-muted-foreground mb-4 line-clamp-2">
                       {product.description}
                     </p>
-                    <div className="flex items-center justify-between">
-                      <span className="text-2xl font-bold">
+                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+                      <span className="text-xl sm:text-2xl font-bold">
                         ${product.price.toFixed(2)}
                       </span>
-                      <Button asChild>
+                      <Button asChild className="w-full sm:w-auto">
                         <Link href={`/products/${product.id}`}>
                           View Details
                         </Link>
@@ -165,11 +165,11 @@ export default function Home() {
             ))}
           </div>
 
-          <div className="text-center mt-12">
-            <Button asChild size="lg">
+          <div className="text-center mt-8 sm:mt-12">
+            <Button asChild size="lg" className="w-full sm:w-auto">
               <Link href="/products">
                 View All Products
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
               </Link>
             </Button>
           </div>
@@ -177,16 +177,16 @@ export default function Home() {
       </section>
 
       {/* Categories */}
-      <section className="py-16 bg-muted/30">
-        <div className="container mx-auto max-w-screen-2xl px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Shop by Category</h2>
-            <p className="text-xl text-muted-foreground">
+      <section className="py-12 sm:py-16 bg-muted/30">
+        <div className="container mx-auto max-w-screen-2xl px-4 sm:px-6">
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">Shop by Category</h2>
+            <p className="text-lg sm:text-xl text-muted-foreground px-4">
               Find the perfect tech solutions for your lifestyle
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 sm:gap-4">
             {categories.map((category) => (
               <Link
                 key={category}
@@ -194,8 +194,8 @@ export default function Home() {
                 className="group"
               >
                 <Card className="transition-all duration-300 group-hover:shadow-md group-hover:-translate-y-1">
-                  <CardContent className="p-6 text-center">
-                    <h3 className="font-semibold group-hover:text-primary transition-colors">
+                  <CardContent className="p-3 sm:p-4 lg:p-6 text-center">
+                    <h3 className="text-sm sm:text-base font-semibold group-hover:text-primary transition-colors">
                       {category}
                     </h3>
                   </CardContent>
@@ -207,19 +207,19 @@ export default function Home() {
       </section>
 
       {/* Call to Action */}
-      <section className="py-16">
-        <div className="container mx-auto max-w-screen-2xl px-4">
-          <div className="bg-primary rounded-2xl p-8 md:p-12 text-center text-primary-foreground">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+      <section className="py-12 sm:py-16">
+        <div className="container mx-auto max-w-screen-2xl px-4 sm:px-6">
+          <div className="bg-primary rounded-lg sm:rounded-2xl p-6 sm:p-8 md:p-12 text-center text-primary-foreground">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">
               Ready to Upgrade Your Tech?
             </h2>
-            <p className="text-xl mb-8 opacity-90">
-              Join thousands of satisfied customers who trust Lunar Tech for their technology needs
+            <p className="text-base sm:text-lg md:text-xl mb-6 sm:mb-8 opacity-90 max-w-2xl mx-auto">
+              Join thousands of satisfied customers who trust WA Tech for their technology needs
             </p>
-            <Button asChild size="lg" variant="secondary">
+            <Button asChild size="lg" variant="secondary" className="w-full sm:w-auto">
               <Link href="/products">
                 Start Shopping
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
               </Link>
             </Button>
           </div>

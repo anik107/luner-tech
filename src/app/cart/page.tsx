@@ -99,15 +99,15 @@ export default function CartPage() {
 
   return (
     <MainLayout>
-      <div className="container mx-auto max-w-screen-2xl px-4 py-8">
-        <div className="flex items-center justify-between mb-8">
+      <div className="container mx-auto max-w-screen-2xl px-4 sm:px-6 py-6 sm:py-8">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 sm:mb-8">
           <div>
-            <h1 className="text-3xl md:text-4xl font-bold mb-4">Shopping Cart</h1>
-            <p className="text-xl text-muted-foreground">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 sm:mb-4">Shopping Cart</h1>
+            <p className="text-lg sm:text-xl text-muted-foreground">
               {cartItems.length} item{cartItems.length !== 1 ? 's' : ''} in your cart
             </p>
           </div>
-          <Button variant="outline" onClick={handleClearCart}>
+          <Button variant="outline" onClick={handleClearCart} className="w-full sm:w-auto">
             <Trash2 className="h-4 w-4 mr-2" />
             Clear Cart
           </Button>
@@ -121,10 +121,10 @@ export default function CartPage() {
                 <CardTitle>Cart Items</CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="space-y-6">
+                <div className="space-y-4 sm:space-y-6">
                   {cartItems.map((item) => (
-                    <div key={item.product.id} className="flex items-center space-x-4 p-4 border border-border rounded-lg">
-                      <div className="relative w-20 h-20 overflow-hidden rounded-md">
+                    <div key={item.product.id} className="flex flex-col sm:flex-row gap-4 p-4 border border-border rounded-lg">
+                      <div className="relative w-full h-48 sm:w-20 sm:h-20 overflow-hidden rounded-md flex-shrink-0">
                         <Image
                           src={item.product.images[0]}
                           alt={item.product.name}
@@ -133,17 +133,20 @@ export default function CartPage() {
                         />
                       </div>
                       
-                      <div className="flex-1 space-y-2">
-                        <Link href={`/products/${item.product.id}`}>
-                          <h3 className="font-semibold hover:text-primary transition-colors cursor-pointer">
-                            {item.product.name}
-                          </h3>
-                        </Link>
-                        <p className="text-sm text-muted-foreground">
-                          {item.product.category}
-                        </p>
-                        <div className="flex items-center justify-between">
-                          <div className="flex items-center space-x-2">
+                      <div className="flex-1 space-y-3 sm:space-y-2">
+                        <div>
+                          <Link href={`/products/${item.product.id}`}>
+                            <h3 className="text-lg sm:text-base font-semibold hover:text-primary transition-colors cursor-pointer">
+                              {item.product.name}
+                            </h3>
+                          </Link>
+                          <p className="text-sm text-muted-foreground">
+                            {item.product.category}
+                          </p>
+                        </div>
+                        
+                        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+                          <div className="flex items-center justify-center sm:justify-start space-x-2">
                             <Button
                               variant="outline"
                               size="sm"
@@ -172,8 +175,8 @@ export default function CartPage() {
                             </Button>
                           </div>
                           
-                          <div className="text-right">
-                            <div className="font-semibold">
+                          <div className="text-center sm:text-right">
+                            <div className="text-lg sm:text-base font-semibold">
                               ${(item.product.price * item.quantity).toFixed(2)}
                             </div>
                             <div className="text-sm text-muted-foreground">
@@ -186,7 +189,7 @@ export default function CartPage() {
                           variant="ghost"
                           size="sm"
                           onClick={() => handleRemoveItem(item.product.id)}
-                          className="text-destructive hover:text-destructive"
+                          className="text-destructive hover:text-destructive w-full sm:w-auto"
                         >
                           <Trash2 className="h-4 w-4 mr-2" />
                           Remove
@@ -201,7 +204,7 @@ export default function CartPage() {
 
           {/* Order Summary */}
           <div className="lg:col-span-1">
-            <Card className="sticky top-4">
+            <Card className="lg:sticky lg:top-4">
               <CardHeader>
                 <CardTitle>Order Summary</CardTitle>
               </CardHeader>
@@ -240,18 +243,20 @@ export default function CartPage() {
                   </div>
                 )}
 
-                <Button asChild size="lg" className="w-full">
-                  <Link href="/checkout">
-                    Proceed to Checkout
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </Link>
-                </Button>
+                <div className="space-y-3">
+                  <Button asChild size="lg" className="w-full">
+                    <Link href="/checkout">
+                      Proceed to Checkout
+                      <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
+                    </Link>
+                  </Button>
 
-                <Button asChild variant="outline" size="lg" className="w-full">
-                  <Link href="/products">
-                    Continue Shopping
-                  </Link>
-                </Button>
+                  <Button asChild variant="outline" size="lg" className="w-full">
+                    <Link href="/products">
+                      Continue Shopping
+                    </Link>
+                  </Button>
+                </div>
 
                 {/* Security Features */}
                 <div className="pt-4 space-y-2 text-sm text-muted-foreground">
@@ -274,11 +279,11 @@ export default function CartPage() {
         </div>
 
         {/* Recommended Products */}
-        <section className="mt-16">
-          <h2 className="text-2xl font-bold mb-8">You might also like</h2>
+        <section className="mt-12 sm:mt-16">
+          <h2 className="text-xl sm:text-2xl font-bold mb-6 sm:mb-8">You might also like</h2>
           <div className="text-center text-muted-foreground">
-            <p>Recommended products will appear here based on your cart items.</p>
-            <Button asChild className="mt-4" variant="outline">
+            <p className="mb-4">Recommended products will appear here based on your cart items.</p>
+            <Button asChild className="w-full sm:w-auto" variant="outline">
               <Link href="/products">
                 Browse All Products
               </Link>
