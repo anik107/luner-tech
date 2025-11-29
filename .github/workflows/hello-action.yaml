@@ -39,4 +39,10 @@ jobs:
         run: git log --oneline -2
 
       - name: Show diff status
-        run: git diff --stat HEAD~1 HEAD
+        run: git diff --stat HEAD~1 HEAD > commit_diff.txt
+
+      - name: Upload diff file
+        uses: actions/upload-artifact@v3
+        with:
+          name: last-two-commit-diff
+          path: commit-diff.txt
