@@ -42,5 +42,5 @@ jobs:
       
       - name: Access Github secrets and variables
         run: |
-          echo "Github secrets": ${{ secrets.DOCKER_USER }}
+          echo "Github secrets": ${{ secrets.DOCKERHUB_USER }}
           echo "Github variables": ${{ vars.REPO_VAR}}
