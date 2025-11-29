@@ -1,0 +1,47 @@
+name: Github workflow practice
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-stage:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install dependencies
+        run: sudo apt-get update && sudo apt-get install -y tree
+
+      - name: Show directory structure
+        run: tree
+
+      - name: Print hello
+        run: echo "Hello world"
+
+      - name: Show date
+        run: date
+
+      - name: Show system info
+        run: uname -a
+
+  diff-stage:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Show last two commits
+        run: git diff --oneline -2
+
+      - name: Show diff status
+        run: git diff HEAD~1 HEAD > anik_diff.txt
+
+      - name: Upload diff file
+        uses: actions/upload-artifact@v4
+        with:
+          name: last two commit diff
+          path: anik_diff.txt
+      
