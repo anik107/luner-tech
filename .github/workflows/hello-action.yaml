@@ -2,19 +2,15 @@ name: Multi-step workflow
 
 on:
   workflow_dispatch:
-    
   push:
     branches:
       - main
 
 jobs:
-  build:
+  build-stage:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
       - name: Install dependencies
         run: sudo apt-get update && sudo apt-get install -y tree
 
@@ -29,3 +25,18 @@ jobs:
 
       - name: Show system info
         run: uname -a
+  
+  diff-stage:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Show last two commits
+        run: git log --oneline -2
+
+      - name: Show diff status
+        run: git diff --stat HEAD~1 HEAD
