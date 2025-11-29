@@ -1,5 +1,8 @@
 name: Github workflow practice
 
+env:
+  GLOBAL_VAR: 'workflow-level'
+
 on:
   push:
     branches:
@@ -7,10 +10,23 @@ on:
 
 jobs:
   build-stage:
+    env:
+      JOB_VAR: 'job-level'
+
     runs-on: ubuntu-latest
+
     steps:
+
       - name: Install dependencies
-        run: sudo apt-get update && sudo apt-get install -y tree
+
+        env:
+          LOCAL_VAR: 'steps-level'
+
+        run: |
+          echo "GLOBAL: $GLOBAL_VAR"
+          echo "JOB: $JOB_VAR"
+          echo "LOCAL: $LOCAL_VAR"
+          sudo apt-get update && sudo apt-get install -y tree
 
       - name: Show directory structure
         run: tree
@@ -23,25 +39,8 @@ jobs:
 
       - name: Show system info
         run: uname -a
-
-  diff-stage:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 2
-
-      - name: Show last two commits
-        run: git diff --oneline -2
-
-      - name: Show diff status
-        run: git diff HEAD~1 HEAD > anik_diff.txt
-
-      - name: Upload diff file
-        uses: actions/upload-artifact@v4
-        with:
-          name: last two commit diff
-          path: anik_diff.txt
       
+      - name: Access Github secrets and variables
+        run: |
+          echo "Github secrets": ${{ secrets.DOCKER_USER }}
+          echo "Github variables": ${{ vars.REPO_VAR}}
