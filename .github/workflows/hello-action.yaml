@@ -42,7 +42,7 @@ jobs:
         run: git diff --stat HEAD~1 HEAD > commit_diff.txt
 
       - name: Upload diff file
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: last-two-commit-diff
-          path: commit-diff.txt
+          path: commit_diff.txt
