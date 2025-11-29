@@ -15,3 +15,7 @@ jobs:
         uses: actions/checkout@v4
       - name: Run hello
         run: echo 'hello world'
+      - name: show system username
+        run: uname -a
+      - name: Show current date
+        run: date
