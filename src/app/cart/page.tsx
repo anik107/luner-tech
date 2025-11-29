@@ -12,6 +12,7 @@ import { getCart, updateCartQuantity, removeFromCart, getCartTotal, clearCart, C
 import { Minus, Plus, Trash2, ShoppingBag, ArrowRight } from "lucide-react"
 import { toast } from "sonner"
 
+
 export default function CartPage() {
   const [cartItems, setCartItems] = useState<CartItem[]>([])
   const [isLoading, setIsLoading] = useState(true)
