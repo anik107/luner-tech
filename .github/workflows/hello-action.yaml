@@ -1,17 +1,14 @@
 name: Lunar Tech github workflow
 
 on:
+  workflow_dispatch:
+    
   push:
     branches:
       - main
-    paths:
-      - '**/*.tsx'
-      - '**/*.tsx'
-      - '**/*.jsx'
-      - '**/*.js'
 
 jobs:
-  build:
+  buil-stage:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
