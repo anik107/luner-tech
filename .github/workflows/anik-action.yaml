@@ -2,6 +2,8 @@ name: Github workflow practice
 
 env:
   GLOBAL_VAR: 'workflow-level'
+  DOCKER_USER: ${{ secrets.DOCKERHUB_USER }}
+  REPO_VAR: ${{ vars.REPO_VAR}}
 
 on:
   push:
@@ -42,5 +44,5 @@ jobs:
       
       - name: Access Github secrets and variables
         run: |
-          echo "Github secrets": ${{ secrets.DOCKERHUB_USER }}
-          echo "Github variables": ${{ vars.REPO_VAR}}
+          echo "Github secrets": $DOCKER_USER
+          echo "Github variables": $REPO_VAR
